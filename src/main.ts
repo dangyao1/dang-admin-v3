@@ -1,6 +1,14 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+import router from './router'
+import TDesign from 'tdesign-vue-next'
+import store from './store'
 
-import './assets/main.css'
+import 'tdesign-vue-next/dist/reset.css'
+import 'tdesign-vue-next/es/style/index.css'
 
-createApp(App).mount('#app')
+const app = createApp(App)
+app.use(TDesign)
+app.use(store)
+app.use(router)
+app.mount('#app')
